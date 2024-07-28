@@ -1,14 +1,10 @@
 {
-    "builds":[
-        {
-            "src":"api/main.py",
-            "use":"@vercel/python"
-        }
-    ],
-    "routes":[
-        {
-            "src":"/(.*)",
-            "dest":"api/main.py"
-        }
+    "version": 2,
+    "name": "postpulse-app",
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/api/$1"
+      }
     ]
-}
+  }
