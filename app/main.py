@@ -6,7 +6,8 @@ from .routers import posts,users,auth,votes
 
 models.Base.metadata.create_all(bind=engine)
 
-app=FastAPI()
+app=FastAPI(title="Weblog",summary="This is my newly created weblog app using FASTAPI",
+description="this application enables you to post your own blogs, view other people posts and like them if you want.")
 
 origins=["https://www.google.com","https://www.youtube.com"]
 
